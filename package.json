@@ -1,16 +1,31 @@
 {
-  "name": "mcp-paper-search",
+  "name": "@scihub-community/mcp-paper-search",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "build": "tsc",
     "start": "node build/index.js",
-    "dev": "tsc && node build/index.js"
+    "dev": "tsc && node build/index.js",
+    "prepublishOnly": "tsc"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "files": [
+    "build",
+    "README.md",
+    "LICENSE"
+  ],
+  "bin": {
+    "mcp-paper-search": "build/index.js"
+  },
+  "keywords": [
+    "paper",
+    "search",
+    "academic",
+    "research"
+  ],
+  "author": "xiaojia21190",
+  "license": "MIT",
+  "description": "A CLI tool for searching academic papers",
+  "git": "https://github.com/scihub-community/mcp-paper-search",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.0",
     "@types/node": "^22.15.21",
